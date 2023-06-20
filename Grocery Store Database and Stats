@@ -1,0 +1,30 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, price INTEGER, brand TEXT);
+
+INSERT INTO store VALUES (1, "Soda", 4, 2.99, "Coca-Cola");
+INSERT INTO store VALUES (2, "Milk", 15, 5.99, "Nelson");
+INSERT INTO store VALUES (3, "Eggs", 15, 3.99, "Organic Valley");
+INSERT INTO store VALUES (4, "Chips", 3, 1.50, "Lay's");
+INSERT INTO store VALUES (5, "Bread", 5, 2.99, "Wonder Bread");
+INSERT INTO store VALUES (6, "Cereal", 2, 6.49, "Kellogg's");
+INSERT INTO store VALUES (7, "Chocolate Bars", 1, 1.99, "Snickers");
+INSERT INTO store VALUES (8, "Cheese", 15, 5.39, "Blue Diamond");
+INSERT INTO store VALUES (9, "Cookies", 1, 2.25, "Oreo");
+INSERT INTO store VALUES (10, "Coffee", 6, 7.89, "Lavazza");
+INSERT INTO store VALUES (11, "Peanut Butter", 8, 4.66, "Kraft");
+INSERT INTO store VALUES (12, "Ice Cream", 15, 5.25, "Kawartha Dairy");
+INSERT INTO store VALUES (13, "Butter", 14, 6.80, "LACTALIS");
+INSERT INTO store VALUES (14, "Tea", 6, 3.89, "Red Label");
+INSERT INTO store VALUES (15, "Dish Soap", 8, 3.50, "Dawn");
+
+--display the database ordered by aisle numbers
+SELECT * FROM store
+ORDER BY aisle asc;
+
+--what is the average price of items in this store?
+SELECT AVG(price) FROM store;
+
+--what are all the items priced under $5?
+SELECT * FROM store WHERE price <= 5 ORDER BY price desc;
+
